@@ -1,0 +1,387 @@
+/* Modern Cursor Follower - Cutting Edge Design */
+
+/* Base cursor styles */
+.cursor-ring,
+.cursor-dot,
+.cursor-magnetic,
+.cursor-text {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: none;
+}
+
+/* Main cursor ring - Glassmorphism effect */
+.cursor-ring {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  scale: 0.3;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.cursor-ring.visible {
+  opacity: 1;
+  scale: 1;
+}
+
+.cursor-ring.hovering {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cursor-ring.clicking {
+  scale: 0.8;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cursor-ring.dragging {
+  width: 100px;
+  height: 100px;
+  background: rgba(26, 200, 203, 0.2);
+  border-color: rgba(26, 200, 203, 0.6);
+  box-shadow: 
+    0 16px 48px rgba(26, 200, 203, 0.3),
+    inset 0 1px 0 rgba(26, 200, 203, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Inner cursor dot - Precise positioning */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+.cursor-dot.visible {
+  opacity: 1;
+  scale: 1;
+}
+
+.cursor-dot.hovering {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  box-shadow: 
+    0 0 25px rgba(255, 255, 255, 0.9),
+    0 0 50px rgba(255, 255, 255, 0.5);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cursor-dot.clicking {
+  scale: 0.5;
+  background: #1CA8CB;
+  box-shadow: 
+    0 0 30px rgba(26, 200, 203, 0.8),
+    0 0 60px rgba(26, 200, 203, 0.4);
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Magnetic effect area - Invisible but functional */
+.cursor-magnetic {
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cursor-magnetic.visible {
+  opacity: 0.01;
+}
+
+/* Text indicator - Modern typography */
+.cursor-text {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 8px;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.cursor-text.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Trail effect - Particle system */
+.cursor-trail {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: trailFade var(--delay) ease-out infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 0.8;
+    scale: 1;
+  }
+  50% {
+    opacity: 0.4;
+    scale: 0.8;
+  }
+  100% {
+    opacity: 0;
+    scale: 0.3;
+  }
+}
+
+/* Enhanced hover effects for interactive elements */
+a:hover ~ .cursor-ring,
+button:hover ~ .cursor-ring,
+[role="button"]:hover ~ .cursor-ring,
+input:hover ~ .cursor-ring,
+textarea:hover ~ .cursor-ring,
+select:hover ~ .cursor-ring,
+.slider-drag-wrap:hover ~ .cursor-ring {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+a:hover ~ .cursor-dot,
+button:hover ~ .cursor-dot,
+[role="button"]:hover ~ .cursor-dot,
+input:hover ~ .cursor-dot,
+textarea:hover ~ .cursor-dot,
+select:hover ~ .cursor-dot,
+.slider-drag-wrap:hover ~ .cursor-dot {
+  background: #ffffff;
+  box-shadow: 
+    0 0 30px rgba(255, 255, 255, 1),
+    0 0 60px rgba(255, 255, 255, 0.6);
+}
+
+/* Special effects for different element types */
+a:hover ~ .cursor-ring {
+  background: rgba(26, 200, 203, 0.15);
+  border-color: rgba(26, 200, 203, 0.4);
+}
+
+button:hover ~ .cursor-ring {
+  background: rgba(255, 181, 57, 0.15);
+  border-color: rgba(255, 181, 57, 0.4);
+}
+
+.slider-drag-wrap:hover ~ .cursor-ring {
+  background: rgba(26, 200, 203, 0.2);
+  border-color: rgba(26, 200, 203, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cursor-ring,
+  .cursor-dot,
+  .cursor-magnetic,
+  .cursor-text,
+  .cursor-trail {
+    display: none;
+  }
+}
+
+/* Hide default cursor */
+body,
+html {
+  cursor: none;
+}
+
+/* Ensure cursor works with all interactive elements */
+a:hover,
+button:hover,
+[role="button"]:hover,
+input:hover,
+textarea:hover,
+select:hover,
+.slider-drag-wrap:hover {
+  cursor: none;
+}
+
+/* Smooth entrance animations */
+@keyframes cursorEntrance {
+  0% {
+    opacity: 0;
+    scale: 0.3;
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+  50% {
+    opacity: 0.7;
+    scale: 1.1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+.cursor-ring.visible {
+  animation: cursorEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cursor-dot.visible {
+  animation: cursorEntrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+/* Magnetic attraction effect */
+@keyframes magneticPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+.cursor-ring.hovering {
+  animation: magneticPulse 2s ease-in-out infinite;
+}
+
+/* Click ripple effect */
+@keyframes clickRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.cursor-ring.clicking::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: clickRipple 0.6s ease-out;
+}
+
+/* Performance optimizations */
+.cursor-ring,
+.cursor-dot,
+.cursor-magnetic {
+  will-change: transform, opacity, scale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cursor-ring {
+    border-width: 0.75px;
+  }
+  
+  .cursor-dot {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+/* Cursor Border Follower - Transparent Circle with Default Cursor */
+
+.cursor-border {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+
+.cursor-border.visible {
+  opacity: 1;
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .cursor-border {
+    display: none;
+  }
+}
+
+/* Keep default cursor visible - don't hide it */
+body,
+html {
+  cursor: auto;
+}
+
+/* Ensure interactive elements show appropriate cursors */
+a:hover {
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+[role="button"]:hover {
+  cursor: pointer;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  cursor: text;
+}
+
+.slider-drag-wrap:hover {
+  cursor: grab;
+}
+
+.slider-drag-wrap:active {
+  cursor: grabbing;
+}
