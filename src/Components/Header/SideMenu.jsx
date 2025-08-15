@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 function SideMenu({ isOpen, onClose }) {
     const [activeMenu, setActiveMenu] = useState(null);
     
-        // Toggle the active state of a dropdown menu
-        const toggleMenu = (index) => {
-            setActiveMenu(activeMenu === index ? null : index);
-        };
+    // Toggle the active state of a dropdown menu
+    const toggleMenu = (index) => {
+        setActiveMenu(activeMenu === index ? null : index);
+    };
     return (
         <>
             <div className={`sidemenu-wrapper sidemenu-info ${isOpen ? "show" : ""}`} style={{ visibility: isOpen ? "visible" : "hidden" }} onClick={onClose} aria-label="Close">
@@ -48,7 +48,7 @@ function SideMenu({ isOpen, onClose }) {
                             <div className="recent-post">
                                 <div className="media-img">
                                     <Link to="/blog/1">
-                                        <img src="assets/img/blog/recent-post-1-1.jpg" alt="Blog Image" />
+                                        <img src="assets/img/blog/recent-post-1-1.jpg" alt="Recent post thumbnail" />
                                     </Link>
                                 </div>
                                 <div className="media-body">
@@ -68,7 +68,7 @@ function SideMenu({ isOpen, onClose }) {
                             <div className="recent-post">
                                 <div className="media-img">
                                     <Link to="/blog/1">
-                                        <img src="assets/img/blog/recent-post-1-2.jpg" alt="Blog Image" />
+                                        <img src="assets/img/blog/recent-post-1-2.jpg" alt="Recent post thumbnail" />
                                     </Link>
                                 </div>
                                 <div className="media-body">
@@ -92,7 +92,7 @@ function SideMenu({ isOpen, onClose }) {
                         <div className="th-widget-contact">
                             <div className="info-box_text">
                                 <div className="icon">
-                                    <img src="assets/img/icon/phone.svg" alt="img" />
+                                    <img src="assets/img/icon/phone.svg" alt="Phone icon" />
                                 </div>
                                 <div className="details">
                                     <p>

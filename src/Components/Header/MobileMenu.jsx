@@ -13,19 +13,15 @@ function MobileMenu({ isOpen, onClose }) {
         }
     };
 
-    // Handle Shop menu separately
-    const toggleShopMenu = (e) => {
-        e.stopPropagation(); // Prevent menu from closing
-        setActiveShopMenu(!activeShopMenu);
-    };
+    // Shop menu functionality removed as it's not being used
 
     // Apply height animation when activeMenu changes
     useEffect(() => {
         Object.keys(menuRefs.current).forEach((key) => {
             const submenu = menuRefs.current[key];
-            if (submenu) {
-                submenu.style.height = activeMenu == key ? `${submenu.scrollHeight}px` : "0px";
-            }
+                            if (submenu) {
+                    submenu.style.height = activeMenu === key ? `${submenu.scrollHeight}px` : "0px";
+                }
         });
     }, [activeMenu]);
 

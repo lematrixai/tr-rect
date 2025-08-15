@@ -35,11 +35,6 @@ function BannerThree() {
         { value: "5 days", label: "5 days" },
         { value: "6 days", label: "6 days" },
     ];
-    const categoryOptions = [
-        { value: "Luxury", label: "Luxury" },
-        { value: "Deluxe", label: "Deluxe" },
-        { value: "Economy", label: "Economy" },
-    ];
 
     useEffect(() => {
         // Function to add animation classes

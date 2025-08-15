@@ -6,16 +6,16 @@ import "swiper/css/effect-coverflow";
 import { Link } from "react-router-dom";
 
 const destinations = [
-  { id: 1, name: "Maldives", listings: 15, image: "/assets/img/destination/destination_1_1.jpg" },
-  { id: 2, name: "Thailand", listings: 22, image: "/assets/img/destination/destination_1_2.jpg" },
-  { id: 3, name: "Belgium", listings: 25, image: "/assets/img/destination/destination_1_3.jpg" },
-  { id: 4, name: "Island", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
-  { id: 5, name: "Maldives", listings: 30, image: "/assets/img/destination/destination_1_5.jpg" },
-  { id: 6, name: "Maldives", listings: 15, image: "/assets/img/destination/destination_1_1.jpg" },
-  { id: 7, name: "Thailand", listings: 22, image: "/assets/img/destination/destination_1_2.jpg" },
-  { id: 8, name: "Belgium", listings: 25, image: "/assets/img/destination/destination_1_3.jpg" },
-  { id: 9, name: "Island", listings: 28, image: "/assets/img/destination/destination_1_4.jpg" },
-  { id: 10, name: "Maldives", listings: 30, image: "/assets/img/destination/destination_1_5.jpg" },
+  { id: 1, name: "Zanzibar", listings: 25, image: "/assets/img/destination/destination_1_1.jpg" },
+  { id: 2, name: "Serengeti", listings: 18, image: "/assets/img/destination/destination_1_2.jpg" },
+  { id: 3, name: "Ngorongoro", listings: 22, image: "/assets/img/destination/destination_1_3.jpg" },
+  { id: 4, name: "Tarangire", listings: 15, image: "/assets/img/destination/destination_1_4.jpg" },
+  { id: 5, name: "Ruaha", listings: 12, image: "/assets/img/destination/destination_1_5.jpg" },
+  { id: 6, name: "Zanzibar", listings: 25, image: "/assets/img/destination/destination_1_1.jpg" },
+  { id: 7, name: "Serengeti", listings: 18, image: "/assets/img/destination/destination_1_2.jpg" },
+  { id: 8, name: "Ngorongoro", listings: 22, image: "/assets/img/destination/destination_1_3.jpg" },
+  { id: 9, name: "Tarangire", listings: 15, image: "/assets/img/destination/destination_1_4.jpg" },
+  { id: 10, name: "Ruaha", listings: 12, image: "/assets/img/destination/destination_1_5.jpg" },
 ];
 
 const sliderOptions = {
@@ -81,8 +81,8 @@ function DestinationOne() {
     <div className="position-relative overflow-hidden">
       <div className="container">
         <div className="title-area text-center">
-          <span className="sub-title">Top Destination</span>
-          <h2 className="sec-title">Popular Destination</h2>
+          <span className="sub-title">Tanzania's Premier Destinations</span>
+          <h2 className="sec-title">Signature Locations</h2>
         </div>
 
         <div className={`slider-drag-wrap ${cursorActive ? 'active' : ''}`}>
@@ -97,7 +97,7 @@ function DestinationOne() {
                         <h4 className="box-title">
                           <Link to="/destination/1">{dest.name}</Link>
                         </h4>
-                        <span className="destination-subtitle">{dest.listings} Listing</span>
+                        <span className="destination-subtitle">{dest.listings} Experiences</span>
                       </div>
                       <div>
                         <Link to="/destination" className="th-btn style2 th-icon">

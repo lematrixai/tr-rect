@@ -34,7 +34,6 @@ function BannerTwo() {
       }
     }
   };
-  const destinationRef = useRef(null);
   const handleScroll = (e) => {
     e.preventDefault();
     document.getElementById("destination-sec")?.scrollIntoView({ behavior: "smooth" });

@@ -9,16 +9,16 @@ const CategoryOne = () => {
   const swiperRef = useRef(null);
 
   const categories = [
-    { id: 1, title: "Cruises", imgSrc: "/assets/img/category/category_1_1.jpg" },
-    { id: 2, title: "Hiking", imgSrc: "/assets/img/category/category_1_2.jpg" },
-    { id: 3, title: "Airbirds", imgSrc: "/assets/img/category/category_1_3.jpg" },
-    { id: 4, title: "Wildlife", imgSrc: "/assets/img/category/category_1_4.jpg" },
-    { id: 5, title: "Walking", imgSrc: "/assets/img/category/category_1_5.jpg" },
-    { id: 6, title: "Cruises", imgSrc: "/assets/img/category/category_1_1.jpg" },
-    { id: 7, title: "Hiking", imgSrc: "/assets/img/category/category_1_2.jpg" },
-    { id: 8, title: "Airbirds", imgSrc: "/assets/img/category/category_1_3.jpg" },
-    { id: 9, title: "Wildlife", imgSrc: "/assets/img/category/category_1_4.jpg" },
-    { id: 10, title: "Walking", imgSrc: "/assets/img/category/category_1_5.jpg" },
+    { id: 1, title: "Beach & Island Retreats", imgSrc: "/assets/img/category/category_1_1.jpg" },
+    { id: 2, title: "Adventure & Wildlife", imgSrc: "/assets/img/category/category_1_2.jpg" },
+    { id: 3, title: "Cultural Immersion", imgSrc: "/assets/img/category/category_1_3.jpg" },
+    { id: 4, title: "Fly-In Safaris", imgSrc: "/assets/img/category/category_1_4.jpg" },
+    { id: 5, title: "Water Adventures", imgSrc: "/assets/img/category/category_1_5.jpg" },
+    { id: 6, title: "Beach & Island Retreats", imgSrc: "/assets/img/category/category_1_1.jpg" },
+    { id: 7, title: "Adventure & Wildlife", imgSrc: "/assets/img/category/category_1_2.jpg" },
+    { id: 8, title: "Cultural Immersion", imgSrc: "/assets/img/category/category_1_3.jpg" },
+    { id: 9, title: "Fly-In Safaris", imgSrc: "/assets/img/category/category_1_4.jpg" },
+    { id: 10, title: "Water Adventures", imgSrc: "/assets/img/category/category_1_5.jpg" },
   ];
 
   useEffect(() => {
@@ -78,8 +78,8 @@ const CategoryOne = () => {
     >
       <div className="container th-container">
         <div className="title-area text-center">
-          <span className="sub-title">Wonderful Place For You</span>
-          <h2 className="sec-title">Tour Categories</h2>
+          <span className="sub-title">Curated Experiences for the Discerning Traveler</span>
+          <h2 className="sec-title">Experience Categories</h2>
         </div>
 
         <Swiper

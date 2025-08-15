@@ -78,22 +78,22 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.2s"
                                     >
-                                        Get unforgetable pleasure with us
+                                        Unveiling Zanzibar's Soul & Africa's Wild Heart
                                     </span>
-                                    <h1
+                                    <h2
                                         className="hero-title"
                                         data-ani="slideinup"
                                         data-ani-delay="0.4s"
                                     >
-                                        Natural Wonder of the world{" "}
-                                    </h1>
+                                        Curated Luxury Adventures in Tanzania{" "}
+                                    </h2>
                                     <div
                                         className="btn-group"
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
                                         <Link to="/tour" className="th-btn th-icon">
-                                            Explore Tours
+                                            Explore Experiences
                                         </Link>
                                         <Link to="/service" className="th-btn style2 th-icon">
                                             Our Services
@@ -120,22 +120,22 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.2s"
                                     >
-                                        Get unforgetable pleasure with us
+                                        Seamless Luxury, Authentic Adventure
                                     </span>
-                                    <h1
+                                    <h2
                                         className="hero-title"
                                         data-ani="slideinup"
                                         data-ani-delay="0.4s"
                                     >
                                         Let’s make your best trip with us{" "}
-                                    </h1>
+                                    </h2>
                                     <div
                                         className="btn-group"
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
                                         <Link to="/tour" className="th-btn th-icon">
-                                            Explore Tours
+                                            Explore Experiences
                                         </Link>
                                         <Link to="/service" className="th-btn style2 th-icon">
                                             Our Services
@@ -162,22 +162,22 @@ function BannerOne() {
                                         data-ani="slideinup"
                                         data-ani-delay="0.2s"
                                     >
-                                        Get unforgetable pleasure with us
+                                        Where Luxury Meets Authentic Discovery
                                     </span>
-                                    <h1
+                                    <h2
                                         className="hero-title"
                                         data-ani="slideinup"
                                         data-ani-delay="0.4s"
                                     >
-                                        Explore beauty of the whole world{" "}
-                                    </h1>
+                                        Bespoke Journeys Across Zanzibar & Beyond{" "}
+                                    </h2>
                                     <div
                                         className="btn-group"
                                         data-ani="slideinup"
                                         data-ani-delay="0.6s"
                                     >
                                         <Link to="/tour" className="th-btn th-icon">
-                                            Explore Tours
+                                            Explore Experiences
                                         </Link>
                                         <Link to="/service" className="th-btn style2 th-icon">
                                             Our Services
